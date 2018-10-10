@@ -8,23 +8,23 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['contact.page.scss']
 })
 export class ContactPage {
-  private todo : FormGroup;
+  public formData : FormGroup;
 
   constructor( private formBuilder: FormBuilder, public alertController: AlertController) {
-    this.todo = this.formBuilder.group({
+    this.formData = this.formBuilder.group({
       title: ['', Validators.required],
       description: [''],
     });
     
   }
   async logForm(){
-    console.log(this.todo.value)
+    console.log(this.formData.value)
   }
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Sent!',
-      subHeader: this.todo.value.title,
-      message: this.todo.value.description,
+      subHeader: this.formData.value.title,
+      message: this.formData.value.description,
       buttons: ['Thanks!']
     });
 

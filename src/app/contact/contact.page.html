@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="todo" (ngSubmit)="presentAlert()">
+  <form [formGroup]="formData" (ngSubmit)="presentAlert()">
   
     <ion-list>
     <ion-item>
@@ -21,7 +21,7 @@
   </ion-list>
 
     <div padding>
-      <ion-button color="primary" block type="submit" [disabled]="!todo.valid">Send!</ion-button>
+      <ion-button color="primary" block type="submit" [disabled]="!formData.valid">Send!</ion-button>
     </div>
   </form>
 </ion-content>
