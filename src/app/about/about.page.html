@@ -4,16 +4,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content><ion-card>
+<ion-content>
+  
+  <ion-card  *ngFor="let bg of blog$">
   <ion-card-header>
-    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    <ion-card-title>Card Title</ion-card-title>
+    <ion-card-subtitle>Grabed from Mosh Media</ion-card-subtitle>
+    <ion-card-title>{{bg.title.rendered}}</ion-card-title>
   </ion-card-header>
-
+  <ion-img width="50%" [src]="bg['_embedded']['wp:featuredmedia'][0]['media_details'].sizes['full'].source_url" ></ion-img>
   <ion-card-content>
-    Keep close to Nature's heart... and break clear away, once in awhile,
-    and climb a mountain or spend a week in the woods. Wash your spirit clean.
+        <div padding>
+            <ion-chip>
+                <ion-label>{{bg.date}}</ion-label>
+              </ion-chip>
+          </div>
   </ion-card-content>
+  <ion-button href="{{bg.link}}" fill="outline" slot="end">View</ion-button>
 </ion-card>
 
 <ion-card>
