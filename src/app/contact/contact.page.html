@@ -7,17 +7,21 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
-        Follow us on Twitter
-      </ion-label>
-    </ion-list-header>
+  <form [formGroup]="todo" (ngSubmit)="presentAlert()">
+  
+    <ion-list>
     <ion-item>
-      <ion-label>
-        <ion-icon name="logo-ionic" slot="start"></ion-icon>
-        @ionicframework
-      </ion-label>
+      <ion-label fixed>Name</ion-label>
+      <ion-input placeholder="My name" type="text" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>About me</ion-label>
+      <ion-textarea placeholder="Something cool about me" formControlName="description"></ion-textarea>
     </ion-item>
   </ion-list>
+
+    <div padding>
+      <ion-button color="primary" block type="submit" [disabled]="!todo.valid">Send!</ion-button>
+    </div>
+  </form>
 </ion-content>

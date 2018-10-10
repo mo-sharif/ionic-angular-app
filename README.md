@@ -4,7 +4,8 @@ Ionic framework with angular playground
 
 #Todo features
 
-- [ ] Home Page Slider
+- [x] Home Page Slider
 - [ ] Contact Form
 - [ ] Display blog content dynamically from API
+- [ ] Live Preview
 
