@@ -8,23 +8,26 @@ import { Component } from '@angular/core';
 export class HomePage {
   slideOpts = {
     effect: 'flip',
-    mode: 'md',
+    mode: 'ios',
   };
   slides = [
     {
-      title: "Welcome to the Docs!",
-      description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
+      title: "Welcome to the future!",
+      description: "This <b>Ionic Framework</b> is cool. We will be working on making it even cooler by integrating it to work with a WordPress Website.",
       image: "assets/img/img1.png",
+      url: "#",
     },
     {
-      title: "What is Ionic?",
-      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
+      title: "Building the layout",
+      description: "<b>Ionic Framework</b> provides us with high quality components, we just need to touch them up and maybe implement components of our own.",
       image: "assets/img/img2.png",
+      url: "#",
     },
     {
-      title: "What is Ionic Cloud?",
-      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
+      title: "WordPress API",
+      description: "We can easily expose WordPress resource, but we need to create our own services to request these recourses.",
       image: "assets/img/img3.png",
+      url: "#",
     }
   ];
   
