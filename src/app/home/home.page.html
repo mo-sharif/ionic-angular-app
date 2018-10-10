@@ -3,8 +3,18 @@
     <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content class="tutorial-page" padding>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+    <ion-slides pager >
+      <ion-slide *ngFor="let slide of slides" class="homePageSlides"> 
+        <img [src]="slide.image" class="slide-image"/>
+        <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+        <p [innerHTML]="slide.description"></p>
+        <button ion-button large clear icon-end color="primary">
+          Continue
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-slide>
+    </ion-slides>
+  
 </ion-content>
