@@ -12,21 +12,21 @@ export class HomePage {
   };
   slides = [
     {
-      title: "Welcome to the future!",
-      description: "This <b>Ionic Framework</b> is cool. We will be working on making it even cooler by integrating it to work with a WordPress Website.",
+      title: "First look",
+      description: "Built on the <b>Ionic Framework</b>, this template is a great front end solution.",
       image: "assets/img/science.png",
       url: "#",
     },
     {
-      title: "Building the layout",
-      description: "<b>Ionic Framework</b> provides us with high quality components, we just need to touch them up and maybe implement components of our own.",
+      title: "Awesome components",
+      description: "Features high quality and reusable angular components",
       image: "assets/img/coins.png",
       url: "#",
     },
     {
-      title: "WordPress API",
-      description: "We can easily expose WordPress resource, but we need to create our own services to request these recourses.",
-      image: "assets/img/walkingMan.png",
+      title: "High performance",
+      description: "Leverages latest asynchronous technologies to increase performance.",
+      image: "assets/img/manWalking.png",
       url: "#",
     }
   ];
