@@ -14,19 +14,19 @@ export class HomePage {
     {
       title: "Welcome to the future!",
       description: "This <b>Ionic Framework</b> is cool. We will be working on making it even cooler by integrating it to work with a WordPress Website.",
-      image: "assets/img/img1.png",
+      image: "assets/img/science.png",
       url: "#",
     },
     {
       title: "Building the layout",
       description: "<b>Ionic Framework</b> provides us with high quality components, we just need to touch them up and maybe implement components of our own.",
-      image: "assets/img/img2.png",
+      image: "assets/img/coins.png",
       url: "#",
     },
     {
       title: "WordPress API",
       description: "We can easily expose WordPress resource, but we need to create our own services to request these recourses.",
-      image: "assets/img/img3.png",
+      image: "assets/img/walkingMan.png",
       url: "#",
     }
   ];
