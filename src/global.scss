@@ -10,20 +10,42 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file+'.eot');
+    src: url($font-file+'.eot?#iefix') format('embedded-opentype'),
+  url($font-file+'.woff') format('woff'),
+  url($font-file+'.ttf') format('truetype'),
+  url($font-file+'.svg#aller') format('svg');
+
+  }
+}
+
+@include font('Montserrat-Light', '/assets/web-fonts/Montserrat-Light-webfont');
+@include font('Montserrat-Bold', '/assets/web-fonts/Montserrat-Bold-webfont');
+
+$break-lg:1024px;
+$break-md:768px;
 $colors: (
   primary:    #488aff,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
+  white:      #fff,
   dark:       #222,
   energized:  #ffc527,
   royal:      #7e60ff,
   subtle:     #444444,
   vibrant:    rebeccapurple,
-  bright:     #ffc125
+  bright:     #ffc125,
+  lightGray: #5a5a5a ,
 );
 
-
+ion-toolbar {
+  --background: #fff;
+  --ion-color-base: #fff !important;
+  }
 
 // App iOS Variables
 // --------------------------------------------------
@@ -41,7 +63,7 @@ $cordova-ios-statusbar-padding:       20px;
 // Material Design only Sass variables can go here
 
 // Change the toolbar background color
-$toolbar-md-background:                   color($colors, primary);
+$toolbar-md-background:                   color($colors, white);
 
 // Change the color of the segment button text
 $toolbar-md-active-color:                 #fff;
@@ -51,3 +73,22 @@ $checkbox-md-icon-checkmark-color:        #fff;
 
 // Used to show the status bar for component demos
 $cordova-md-statusbar-padding:           29px;
+
+.container { 
+  
+  @media screen and (min-width: $break-lg){
+  margin-right: 18%;
+  margin-left: 18%;
+} 
+@media screen and (max-width: $break-md){
+  margin: 0;padding:0;
+} 
+} 
+p{
+  font-family: 'Montserrat-Light', sans-serif;
+}
+h1,h2{
+  font-family: 'Montserrat-Bold', sans-serif;
+}
+
+

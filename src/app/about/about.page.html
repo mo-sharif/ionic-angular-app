@@ -1,12 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Blog</ion-title>
+    <ion-title text-center>Blog</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   
-  <ion-card  *ngFor="let bg of blog$">
+  <ion-card  *ngFor="let bg of blog$ | async">
   <ion-card-header>
     <ion-card-subtitle>Grabed from Mosh Media</ion-card-subtitle>
     <ion-card-title>{{bg.title.rendered}}</ion-card-title>
