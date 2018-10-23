@@ -15,7 +15,7 @@ import { map } from 'rxjs/operators';
 
 export class ContactPage implements OnInit {
   public formData : FormGroup
-  public _messages$: Observable<Messages[]>
+  public _messages$: Messages[]
 
   constructor( 
     private formBuilder: FormBuilder, 
@@ -31,9 +31,16 @@ export class ContactPage implements OnInit {
   }
 
   ngOnInit() {
+
+  /*  
     this._messages$ = this.messagesService.getMessages().pipe(
       map( res=> res )
     )
+    */
+
+   this.messagesService.getMessages().subscribe(data => this._messages$ = data)
+ 
+
 } 
 
   async logForm(){
