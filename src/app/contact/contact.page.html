@@ -25,6 +25,7 @@
   </form>
 
   <ion-list>
+      <ion-list-header >Demo Messages</ion-list-header>
     <ion-item>
       <ion-avatar slot="start">
         <img src="https://beta.ionicframework.com/docs/content/component-preview-app/docs-www/assets/img/avatar-leia.png" />
@@ -35,6 +36,17 @@
         <p>I've placed information vital to the survival...</p>
       </ion-label>
     </ion-item>
+    <ion-list-header >Recent Messages</ion-list-header>
+    <ion-item *ngFor="let message of _messages$ | async">
+        <ion-avatar slot="start">
+            <img src="https://beta.ionicframework.com/docs/content/component-preview-app/docs-www/assets/img/avatar-leia.png" />
+          </ion-avatar>
+          <ion-label>
+            <h2 [innerHTML]="message.name"></h2>
+            <h3 [innerHTML]="message.company.catchPhrase"></h3>
+            <p [innerHTML]="message.company.bs"></p>
+          </ion-label>
+      </ion-item>
   </ion-list>
 
   </div>

@@ -3,7 +3,8 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 import { Messages } from '../classes/messages';
 import { MessagesService } from '../services/messages.service';
-
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-contact',
@@ -14,7 +15,7 @@ import { MessagesService } from '../services/messages.service';
 
 export class ContactPage implements OnInit {
   public formData : FormGroup
-  _messagesArray: Messages[]
+  public _messages$: Observable<Messages[]>
 
   constructor( 
     private formBuilder: FormBuilder, 
@@ -29,23 +30,16 @@ export class ContactPage implements OnInit {
     });
   }
 
-  ngOnInit() :void {
-   this.getMessages()
-}
-
-getMessages() :void {
-
-    this.messagesService.getMessages()
-    .subscribe(
-        results => this._messagesArray =results,
-        error => console.log("Error :: " + error)
+  ngOnInit() {
+    this._messages$ = this.messagesService.getMessages().pipe(
+      map( res=> res )
     )
-
-}
+} 
 
   async logForm(){
     console.log(this.formData.value)
   }
+
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Sent!',

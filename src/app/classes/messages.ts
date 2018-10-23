@@ -3,4 +3,6 @@ export class Messages {
     name: string;
     username: string;
     email: string;
+    catchPhrase: string;
+    bs: string;
 }
