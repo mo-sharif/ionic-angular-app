@@ -22,11 +22,7 @@
   }
 }
 
-@include font('Montserrat-Light', '/assets/web-fonts/Montserrat-Light-webfont');
-@include font('Montserrat-Bold', '/assets/web-fonts/Montserrat-Bold-webfont');
 
-$break-lg:1024px;
-$break-md:768px;
 $colors: (
   primary:    #488aff,
   secondary:  #32db64,
@@ -46,6 +42,36 @@ ion-toolbar {
   --background: #fff;
   --ion-color-base: #fff !important;
   }
+
+
+  @include font('Montserrat-Light', '/assets/web-fonts/Montserrat-Light-webfont');
+  @include font('Montserrat-Bold', '/assets/web-fonts/Montserrat-Bold-webfont');
+  
+  $break-lg:1024px;
+  $break-md:768px;
+  .container { 
+    
+    @media screen and (min-width: $break-lg){
+    margin-right: 18%;
+    margin-left: 18%;
+  } 
+  @media screen and (max-width: $break-md){
+    margin: 0;padding:0;
+  } 
+  } 
+  p{
+    font-family: 'Montserrat-Light', sans-serif;
+  }
+  h1,h2{
+    font-family: 'Montserrat-Bold', sans-serif;
+  }
+  
+  h2-shadow{
+    text-shadow: -2px 2px 15px #cecece; 
+  }
+
+
+
 
 // App iOS Variables
 // --------------------------------------------------
@@ -74,21 +100,7 @@ $checkbox-md-icon-checkmark-color:        #fff;
 // Used to show the status bar for component demos
 $cordova-md-statusbar-padding:           29px;
 
-.container { 
-  
-  @media screen and (min-width: $break-lg){
-  margin-right: 18%;
-  margin-left: 18%;
-} 
-@media screen and (max-width: $break-md){
-  margin: 0;padding:0;
-} 
-} 
-p{
-  font-family: 'Montserrat-Light', sans-serif;
-}
-h1,h2{
-  font-family: 'Montserrat-Bold', sans-serif;
-}
+
+
 
 
