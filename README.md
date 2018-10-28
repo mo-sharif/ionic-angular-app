@@ -1,6 +1,6 @@
 # ionic-angular-app
 
-This template will serve as a Front end for WordPress powered websites. This works by exposing API resources of a WordPress website and requesting thoes resourece through our Angular/ionic front end.
+This template will serve as a Front end for WordPress powered websites. This works by exposing API resources of a WordPress website and requesting these resources through our Angular/ionic front end.
 
 ### Preview
 
